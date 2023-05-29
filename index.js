@@ -1,0 +1,443 @@
+var i = document.getElementById("i");
+var btn = document.getElementById("btn");
+var select = document.getElementById("select");
+var category = document.getElementById("category");
+var category_list = document.getElementById("category-list");
+var hidden_div = document.getElementById("nav-hidden");
+var hidden_div1 = document.getElementById("nav-hidden-1");
+var link_hide = document.getElementById("link-hide");
+var link_hide1 = document.getElementById("link-hide-1");
+var link_hide2 = document.getElementById("link-hide-2");
+var hidden_div2 = document.getElementById("nav-hidden-2");
+var women_btn = document.getElementById("nav-3-women-button");
+var women_drop = document.getElementById("nav-3-hidden-1");
+var men_button = document.getElementById("nav-3-men-button");
+var pages_button = document.getElementById("nav-3-pages-button");
+var pages_drop = document.getElementById("nav-3-hidden-3");
+var men_drop = document.getElementById("nav-3-hidden-2");
+var nav_left_category = document.getElementById("left-nav-category");
+var nav_left_category_list = document.getElementById("left-nav-category-list");
+var nav_left_menu = document.getElementById("left-nav-menu");
+var nav_left_menu_list = document.getElementById("left-nav-menu-list");
+var left_nav_link_hide = document.getElementById("left-nav-link-hide");
+var left_nav_link_content = document.getElementById(
+  "left-nav-link-hide-content"
+);
+var left_nav_hidden_1 = document.getElementById("left-nav-hidden-1");
+var left_nav_link_hide_1 = document.getElementById("left-nav-link-hide-1");
+var left_nav_hidden_2 = document.getElementById("left-nav-hidden-2");
+var left_nav_link_hide_2 = document.getElementById("left-nav-link-hide-2");
+var left_nav_menu_hide_1 = document.getElementById("left-nav-menu-hide-1");
+var left_nav_menu_hide_content1 = document.getElementById(
+  "left-nav-menu-hide-content1"
+);
+var left_nav_menu_hide_2 = document.getElementById("left-nav-menu-hide-2");
+var left_nav_menu_hide_content2 = document.getElementById(
+  "left-nav-menu-hide-content2"
+);
+var left_nav_menu_hide_3 = document.getElementById("left-nav-menu-hide-3");
+var left_nav_menu_hide_content3 = document.getElementById(
+  "left-nav-menu-hide-content3"
+);
+var nav_left_show = document.getElementById("nav-left-show");
+var nav_left_id = document.getElementById("left-side-navbar-id");
+var section1 = document.getElementById("section1");
+var overylay = document.getElementById("overlay-id");
+// left nav dropdowns
+nav_left_show.addEventListener("click", () => {
+  nav_left_id.style.left === "-260px";
+  nav_left_id.style.left = "0px";
+  overylay.style.display = "block";
+
+  // left nav overlay
+  document.addEventListener("click", function (event) {
+    if (
+      !nav_left_id.contains(event.target) &&
+      !nav_left_show.contains(event.target)
+    ) {
+      nav_left_id.style.left = "-260px";
+      overylay.style.display = "none";
+    }
+  });
+});
+
+// categories dropdowns
+left_nav_link_hide.addEventListener("click", () => {
+  if (left_nav_link_content.style.display === "none") {
+    left_nav_link_content.style.display = "block";
+    left_nav_link_content.style.opacity = 0;
+    left_nav_link_content.style.height = "0";
+    setTimeout(() => {
+      left_nav_link_content.style.transition =
+        "opacity 0.3s ease-in-out, height 3s ease-in-out";
+      left_nav_link_content.style.opacity = 1;
+      left_nav_link_content.style.height = "100%";
+    }, 10);
+  } else {
+    left_nav_link_content.style.opacity = 0;
+    left_nav_link_content.style.height = "0";
+    setTimeout(() => {
+      left_nav_link_content.style.display = "none";
+    }, 100);
+  }
+});
+left_nav_link_hide_1.addEventListener("click", () => {
+  if (left_nav_hidden_1.style.display === "none") {
+    left_nav_hidden_1.style.display = "block";
+    left_nav_hidden_1.style.opacity = 0;
+    left_nav_hidden_1.style.height = "0";
+    setTimeout(() => {
+      left_nav_hidden_1.style.transition =
+        "opacity 0.3s ease-in-out, height 3s ease-in-out";
+      left_nav_hidden_1.style.opacity = 1;
+      left_nav_hidden_1.style.height = "100%";
+    }, 10);
+  } else {
+    left_nav_hidden_1.style.opacity = 0;
+    left_nav_hidden_1.style.height = "0";
+    setTimeout(() => {
+      left_nav_hidden_1.style.display = "none";
+    }, 100);
+  }
+});
+
+left_nav_link_hide_2.addEventListener("click", () => {
+  if (left_nav_hidden_2.style.display === "none") {
+    left_nav_hidden_2.style.display = "block";
+    left_nav_hidden_2.style.opacity = 0;
+    left_nav_hidden_2.style.height = "0";
+    setTimeout(() => {
+      left_nav_hidden_2.style.transition =
+        "opacity 0.3s ease-in-out, height 3s ease-in-out";
+      left_nav_hidden_2.style.opacity = 1;
+      left_nav_hidden_2.style.height = "100%";
+    }, 10);
+  } else {
+    left_nav_hidden_2.style.opacity = 0;
+    left_nav_hidden_2.style.height = "0";
+    setTimeout(() => {
+      left_nav_hidden_2.style.display = "none";
+    }, 100);
+  }
+});
+
+nav_left_category.addEventListener("click", function () {
+  if (nav_left_category_list.style.display === "none") {
+    nav_left_category_list.style.display = "block";
+    nav_left_category_list.style.opacity = 0;
+    nav_left_category_list.style.height = "0";
+    setTimeout(() => {
+      nav_left_category_list.style.transition =
+        "opacity 0.3s ease-in-out, height 3s ease-in-out";
+      nav_left_category_list.style.opacity = 1;
+      nav_left_category_list.style.height = "100%";
+    }, 100);
+  } else {
+    nav_left_category_list.style.opacity = 0;
+    nav_left_category_list.style.height = "0";
+    setTimeout(() => {
+      nav_left_category_list.style.display = "none";
+    }, 200);
+  }
+});
+// menu drop down
+nav_left_menu.addEventListener("click", function () {
+  if (nav_left_menu_list.style.display === "none") {
+    nav_left_menu_list.style.display = "block";
+    nav_left_menu_list.style.opacity = 0;
+    nav_left_menu_list.style.height = "0";
+    setTimeout(() => {
+      nav_left_menu_list.style.transition =
+        "opacity 0.3s ease-in-out, height 3s ease-in-out";
+      nav_left_menu_list.style.opacity = 1;
+      nav_left_menu_list.style.height = "100%";
+    }, 100);
+  } else {
+    nav_left_menu_list.style.opacity = 0;
+    nav_left_menu_list.style.height = "0";
+    setTimeout(() => {
+      nav_left_menu_list.style.display = "none";
+    }, 200);
+  }
+});
+
+left_nav_menu_hide_1.addEventListener("click", () => {
+  if (left_nav_menu_hide_content1.style.display === "none") {
+    left_nav_menu_hide_content1.style.display = "block";
+    left_nav_menu_hide_content1.style.opacity = 0;
+    left_nav_menu_hide_content1.style.height = "0";
+    setTimeout(() => {
+      left_nav_menu_hide_content1.style.transition =
+        "opacity 0.3s ease-in-out, height 3s ease-in-out";
+      left_nav_menu_hide_content1.style.opacity = 1;
+      left_nav_menu_hide_content1.style.height = "100%";
+    }, 10);
+  } else {
+    left_nav_menu_hide_content1.style.opacity = 0;
+    left_nav_menu_hide_content1.style.height = "0";
+    setTimeout(() => {
+      left_nav_menu_hide_content1.style.display = "none";
+    }, 100);
+  }
+});
+left_nav_menu_hide_2.addEventListener("click", () => {
+  if (left_nav_menu_hide_content2.style.display === "none") {
+    left_nav_menu_hide_content2.style.display = "block";
+    left_nav_menu_hide_content2.style.opacity = 0;
+    left_nav_menu_hide_content2.style.height = "0";
+    setTimeout(() => {
+      left_nav_menu_hide_content2.style.transition =
+        "opacity 0.3s ease-in-out, height 3s ease-in-out";
+      left_nav_menu_hide_content2.style.opacity = 1;
+      left_nav_menu_hide_content2.style.height = "100%";
+    }, 10);
+  } else {
+    left_nav_menu_hide_content2.style.opacity = 0;
+    left_nav_menu_hide_content2.style.height = "0";
+    setTimeout(() => {
+      left_nav_menu_hide_content2.style.display = "none";
+    }, 100);
+  }
+});
+left_nav_menu_hide_3.addEventListener("click", () => {
+  if (left_nav_menu_hide_content3.style.display === "none") {
+    left_nav_menu_hide_content3.style.display = "block";
+    left_nav_menu_hide_content3.style.opacity = 0;
+    left_nav_menu_hide_content3.style.height = "0";
+    setTimeout(() => {
+      left_nav_menu_hide_content3.style.transition =
+        "opacity 0.3s ease-in-out, height 3s ease-in-out";
+      left_nav_menu_hide_content3.style.opacity = 1;
+      left_nav_menu_hide_content3.style.height = "100%";
+    }, 10);
+  } else {
+    left_nav_menu_hide_content3.style.opacity = 0;
+    left_nav_menu_hide_content3.style.height = "0";
+    setTimeout(() => {
+      left_nav_menu_hide_content3.style.display = "none";
+    }, 100);
+  }
+});
+
+// --------------------------------
+
+btn.addEventListener("click", function () {
+  i.style.border = "2px solid #3482e7";
+  select.style.border = "2px solid #3482e7";
+  btn.style.outline = "2px solid #3482e7";
+  i.style.borderLeft = "none";
+  btn.style.borderLeft = "none";
+  btn.style.marginLeft = "-31px";
+
+  document.addEventListener("click", function removeBorder(event) {
+    if (!btn.contains(event.target)) {
+      i.style.border = "1px solid rgb(182, 176, 176)";
+      btn.style.outline = "none";
+      select.style.border = "1px solid rgb(182, 176, 176)";
+      (i.style.borderLeft = "none"), (btn.style.marginLeft = "-30px");
+
+      document.removeEventListener("click", removeBorder);
+    }
+  });
+});
+
+category.addEventListener("click", function drop() {
+  // If the dropdown menu is hidden, show it
+  if (category_list.style.display === "none") {
+    category_list.style.transition =
+      "opacity 0.3s ease-in-out, height 3s ease-in-out"; // set the transition before changing the display property
+    category_list.style.display = "block";
+    setTimeout(() => {
+      category_list.style.opacity = 1;
+      category_list.style.height = "100%";
+    }, 50);
+  } else {
+    // Otherwise, hide it
+    category_list.style.opacity = 0;
+    category_list.style.height = "0";
+    setTimeout(() => {
+      category_list.style.display = "none";
+    }, 150);
+  }
+  document.addEventListener("click", function (event) {
+    if (
+      !category.contains(event.target) &&
+      !category_list.contains(event.target)
+    ) {
+      category_list.style.display = "none";
+    }
+  });
+});
+
+link_hide.addEventListener("click", function () {
+  if (hidden_div.style.display === "none") {
+    hidden_div.style.opacity = "0";
+    hidden_div.style.display = "block";
+    setTimeout(function () {
+      hidden_div.style.opacity = "1";
+    }, 10); // Delay to allow display property to take effect before transitioning opacity
+  } else {
+    hidden_div.style.opacity = "0";
+    setTimeout(function () {
+      hidden_div.style.display = "none";
+    }, 300); // Match transition duration
+  }
+  hidden_div.style.transition = "opacity 0.3s ease-in-out";
+});
+
+hidden_div.addEventListener("click", function (event) {
+  event.stopPropagation(); // Prevent click event from propagating to document object
+});
+
+document.addEventListener("click", function (event) {
+  if (!link_hide.contains(event.target) && !hidden_div.contains(event.target)) {
+    hidden_div.style.display = "none";
+  }
+});
+
+link_hide1.addEventListener("click", function () {
+  if (hidden_div1.style.display === "none") {
+    hidden_div1.style.opacity = "0";
+    hidden_div1.style.display = "block";
+    setTimeout(function () {
+      hidden_div1.style.opacity = "1";
+    }, 10); // Delay to allow display property to take effect before transitioning opacity
+  } else {
+    hidden_div1.style.opacity = "0";
+    setTimeout(function () {
+      hidden_div1.style.display = "none";
+    }, 300); // Match transition duration
+  }
+  hidden_div1.style.transition = "opacity 0.3s ease-in-out";
+});
+hidden_div1.addEventListener("click", function (event) {
+  event.stopPropagation(); // Prevent click event from propagating to document object
+});
+
+document.addEventListener("click", function (event) {
+  if (
+    !link_hide1.contains(event.target) &&
+    !hidden_div1.contains(event.target)
+  ) {
+    hidden_div1.style.display = "none";
+  }
+});
+
+// document.addEventListener("click", function (event) {
+//   if (hidden_div1.contains(event.target)) {
+//     hidden_div1.style.display = "block";
+//   }
+// });
+
+link_hide2.addEventListener("click", function () {
+  if (hidden_div2.style.display === "none") {
+    hidden_div2.style.opacity = "0";
+    hidden_div2.style.display = "block";
+    setTimeout(function () {
+      hidden_div2.style.opacity = "1";
+    }, 10); // Delay to allow display property to take effect before transitioning opacity
+  } else {
+    hidden_div2.style.opacity = "0";
+    setTimeout(function () {
+      hidden_div2.style.display = "none";
+    }, 300); // Match transition duration
+  }
+  hidden_div2.style.transition = "opacity 0.3s ease-in-out";
+});
+
+hidden_div2.addEventListener("click", function (event) {
+  event.stopPropagation(); // Prevent click event from propagating to document object
+});
+
+document.addEventListener("click", function (event) {
+  if (
+    !link_hide2.contains(event.target) &&
+    !hidden_div2.contains(event.target)
+  ) {
+    hidden_div2.style.display = "none";
+  }
+});
+
+// women display drop down
+women_btn.addEventListener("click", function () {
+  if (women_drop.style.display === "none") {
+    women_drop.style.opacity = "0";
+    women_drop.style.display = "block";
+    setTimeout(function () {
+      women_drop.style.opacity = "1";
+    }, 10);
+  } else {
+    women_drop.style.opacity = "0";
+    setTimeout(function () {
+      women_drop.style.display = "none";
+    }, 300);
+  }
+  women_drop.style.transition = "opacity 0.3s ease-in-out";
+});
+
+document.addEventListener("click", function (event) {
+  if (!women_btn.contains(event.target)) {
+    women_drop.style.display = "none";
+  }
+});
+document.addEventListener("click", function (event) {
+  if (women_drop.contains(event.target)) {
+    women_drop.style.display = "block";
+  }
+});
+
+// men display drop down
+men_button.addEventListener("click", function () {
+  if (men_drop.style.display === "none") {
+    men_drop.style.opacity = "0";
+    men_drop.style.display = "block";
+    setTimeout(function () {
+      men_drop.style.opacity = "1";
+    }, 10); // Delay to allow display property to take effect before transitioning opacity
+  } else {
+    men_drop.style.opacity = "0";
+    setTimeout(function () {
+      men_drop.style.display = "none";
+    }, 300); // Match transition duration
+  }
+  men_drop.style.transition = "opacity 0.3s ease-in-out";
+});
+
+document.addEventListener("click", function (event) {
+  if (!men_button.contains(event.target)) {
+    men_drop.style.display = "none";
+  }
+});
+document.addEventListener("click", function (event) {
+  if (men_drop.contains(event.target)) {
+    men_drop.style.display = "block";
+  }
+});
+
+// pages drop
+pages_button.addEventListener("click", function () {
+  if (pages_drop.style.display === "none") {
+    pages_drop.style.opacity = "0";
+    pages_drop.style.display = "block";
+    setTimeout(function () {
+      pages_drop.style.opacity = "1";
+    }, 10); // Delay to allow display property to take effect before transitioning opacity
+  } else {
+    pages_drop.style.opacity = "0";
+    setTimeout(function () {
+      pages_drop.style.display = "none";
+    }, 300); // Match transition duration
+  }
+  pages_drop.style.transition = "opacity 0.3s ease-in-out";
+});
+
+document.addEventListener("click", function (event) {
+  if (!pages_button.contains(event.target)) {
+    pages_drop.style.display = "none";
+  }
+});
+document.addEventListener("click", function (event) {
+  if (pages_drop.contains(event.target)) {
+    pages_drop.style.display = "block";
+  }
+});
