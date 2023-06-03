@@ -323,12 +323,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-// document.addEventListener("click", function (event) {
-//   if (hidden_div1.contains(event.target)) {
-//     hidden_div1.style.display = "block";
-//   }
-// });
-
 link_hide2.addEventListener("click", function () {
   if (hidden_div2.style.display === "none") {
     hidden_div2.style.opacity = "0";
@@ -441,3 +435,75 @@ document.addEventListener("click", function (event) {
     pages_drop.style.display = "block";
   }
 });
+
+// ----------------------------------------- slider ----------------------------------------------
+
+const sliderImage = document.getElementById("slider-id");
+const slides = [
+  document.getElementById("slider-label-1"),
+  document.getElementById("slider-label-2"),
+  document.getElementById("slider-label-3"),
+  document.getElementById("slider-label-4"),
+  document.getElementById("slider-label-5"),
+];
+
+// Array of image sources
+const imageSources = [
+  "../icons/WS-Task2/images/1.jpg",
+  "../icons/WS-Task2/images/2.jpg",
+  "../icons/WS-Task2/images/3.jpg",
+  "../icons/WS-Task2/images/4.jpg",
+  "../icons/WS-Task2/images/5.jpg",
+];
+
+// Set the initial active slide index to 0
+let activeSlideIndex = 0;
+
+// Start the interval to change the background image every 5 seconds
+const intervalId = setInterval(() => {
+  // Update the active slide index to the next index in the list
+  activeSlideIndex = (activeSlideIndex + 1) % imageSources.length;
+
+  // Update the background image source to the new active slide
+  sliderImage.style.backgroundImage = `url('${imageSources[activeSlideIndex]}')`;
+
+  // Update the border color of the active slide label
+  slides[activeSlideIndex].style.borderColor = "#40D3DC";
+
+  // Reset the border color of all other labels
+  for (let i = 0; i < slides.length; i++) {
+    if (i !== activeSlideIndex) {
+      slides[i].style.borderColor = "rgba(0, 0, 0, 0.7)";
+    }
+  }
+}, 5000);
+
+// Function to change the background image source and active slide index
+function changeBackgroundImage(index) {
+  
+  sliderImage.style.transition = "none";
+
+  // Update the background image source to the clicked label
+  sliderImage.style.backgroundImage = `url('${imageSources[index]}')`;
+
+  // Update the active slide index to the clicked label index
+  activeSlideIndex = index;
+
+  // Update the border color of the active slide label
+  slides[activeSlideIndex].style.borderColor = "#40D3DC";
+
+  // Reset the border color of all other labels
+  for (let i = 0; i < slides.length; i++) {
+    if (i !== activeSlideIndex) {
+      slides[i].style.borderColor = "rgba(0, 0, 0, 0.7)";
+    }
+  }
+}
+
+// Add event listeners to each label to change the background image
+for (let i = 0; i < slides.length; i++) {
+  slides[i].addEventListener("click", function () {
+    changeBackgroundImage(i);
+    sliderImage.style.transition = " 4s ease-in-out";
+  });
+}
