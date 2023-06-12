@@ -227,7 +227,7 @@ btn.addEventListener("click", function () {
   btn.style.outline = "2px solid #3482e7";
   i.style.borderLeft = "none";
   btn.style.borderLeft = "none";
-  btn.style.marginLeft = "-31px";
+  btn.style.marginLeft = "-30px";
 
   document.addEventListener("click", function removeBorder(event) {
     if (!btn.contains(event.target)) {
@@ -480,7 +480,6 @@ const intervalId = setInterval(() => {
 
 // Function to change the background image source and active slide index
 function changeBackgroundImage(index) {
-  
   sliderImage.style.transition = "none";
 
   // Update the background image source to the clicked label
@@ -507,3 +506,4 @@ for (let i = 0; i < slides.length; i++) {
     sliderImage.style.transition = " 4s ease-in-out";
   });
 }
+
