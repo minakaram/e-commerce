@@ -153,7 +153,32 @@ body {
   overflow: hidden;
   background-repeat: no-repeat;
 }
-
+@media (width<450px) {
+  .left-side-navbar{
+    width: 200px;
+  }
+  .left-side-navbar button {
+    width: 200px;
+  }
+  .left-side-navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .left-side-navbar header {
+    color: black;
+    font-size: 10px;
+    font-weight: 700;
+  }
+  .left-side-navbar ul li {
+    width: 100%;
+    padding: 7px;
+  }
+}
 /*--------------- nav left menu  ------------*/
 .menu-toggler-nav-left {
   background-color: #2e3037;
@@ -202,7 +227,7 @@ body {
   color: white;
   font-size: 11px;
   text-align: center;
-  padding-right: 70px;
+  padding-right: 125px;
 }
 .navigation-container .nav-1 .nav-1-inner-left img {
   height: 16px;
@@ -259,6 +284,11 @@ body {
   text-transform: uppercase;
   box-shadow: none;
 }
+@media (width<900px) {
+  .navigation-container .nav-1 .nav-1-inner-left {
+    padding-right: 0px;
+  }
+}
 @media (width<710px) {
   .navigation-container .nav-1 {
     flex-direction: column;
@@ -289,7 +319,7 @@ body {
 .navigation-container .nav-2 .nav-2-inner-left {
   width: 50%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding: 4px 0px;
   text-transform: uppercase;
@@ -297,6 +327,7 @@ body {
   font-size: 11px;
   text-align: center;
   position: relative;
+  padding-left: 100px;
 }
 .navigation-container .nav-2 .nav-2-inner-left img {
   width: 100px;
@@ -414,19 +445,30 @@ body {
   margin-left: 15px;
   display: none;
 }
-@media (width<1130px) {
+.img-logo {
+  margin-right: 30px;
+  display: none;
+}
+.img-logo img {
+  border: none !important;
+  width: 120px !important;
+  height: 50px !important;
+}
+@media (width<1200px) {
   .navigation-container .nav-2 {
     width: 90%;
     margin: auto;
   }
   .navigation-container .nav-2 .nav-2-inner-left {
     width: 70%;
+    padding-left: 0;
+    justify-content: flex-start;
   }
   .navigation-container .nav-2 .nav-2-inner-right {
     width: 30%;
   }
 }
-@media (width<940px) {
+@media (width<970px) {
   .navigation-container .nav-2 .nav-2-inner-left {
     width: 100%;
     margin-bottom: 10px;
@@ -442,12 +484,24 @@ body {
   .navigation-container .nav-2 .nav-2-inner-right {
     width: 100%;
   }
+}
+@media (width<970px) {
   .main-toggler {
     display: inline-block;
   }
 }
-
-@media (width<650px) {
+@media (width<770px) {
+  .navigation-container .nav-2 .nav-2-inner-left {
+    padding-left: 0px;
+  }
+  .navigation-container .nav-2 .nav-2-inner-left img {
+    display: none;
+  }
+  .img-logo {
+    display: inline-block;
+  }
+}
+@media (width<500px) {
   .navigation-container .nav-2 .nav-2-inner-left select {
     width: 80px;
     height: 41px;
@@ -460,12 +514,33 @@ body {
     height: 41px;
     position: absolute;
   }
+  .img-logo {
+    margin-right: 0px;
+  }
+  .img-logo img {
+    width: 80px !important;
+    height: 45px !important;
+  }
+  .navigation-container .nav-2 .nav-2-inner-right {
+    font-size: 8px;
+  }
+  .navigation-container .nav-2 .nav-2-inner-right button {
+    font-size: 8px !important;
+    padding: 0;
+  }
+  .navigation-container .nav-2 .nav-2-inner-right span {
+    margin-left: 3px !important;
+  }
+  .navigation-container .nav-2 .nav-2-inner-right ul {
+    margin-left: -40px !important;
+    margin-top: 17px !important;
+  }
 }
 /*--------------------------- nav 3 --------------------------*/
 .nav-3 {
   width: 100%;
   background-color: #2e3037;
-  padding-left: 150px;
+  padding-left: 156px;
   z-index: 100;
   display: flex;
   align-items: center;
@@ -477,6 +552,7 @@ body {
   display: inline-block;
   height: 100%;
 }
+
 .category-toggler-nav-3 {
   background-color: #fff;
   color: white;
@@ -499,15 +575,18 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  display: none;
+  visibility: hidden;
   text-transform: uppercase;
   z-index: 100;
   position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, height 3s ease-in-out;
 }
 .nav-3-category ul {
   width: 100%;
   padding: 0px;
   background-color: white;
+  transition: 0.3s ease-in-out;
 }
 .nav-3-category ul li {
   display: flex;
@@ -647,7 +726,7 @@ body {
   padding: 10px;
   text-align: center;
 }
-.content-img2 .fukin-img {
+.content-img2 .local-img {
   height: 320px;
   width: 100%;
 }
@@ -872,7 +951,7 @@ body {
   width: 1000px;
   position: absolute;
   top: 113%;
-  left: -530px;
+  left: -620px;
   display: none;
   padding: 10px 0px;
   background-color: white;
@@ -883,7 +962,7 @@ body {
   width: 700px;
   position: absolute;
   top: 113%;
-  left: -400px;
+  left: -420px;
   padding: 10px 0px;
   background-color: white;
   display: none;
@@ -946,11 +1025,11 @@ body {
 
 @media (width<1200px) {
   .nav-3-right-hidden2 {
-    width: 900px;
-    left: -620px;
+    width: 850px;
+    left: -530px;
   }
   .nav-3-right-hidden1 {
-    left: -400px;
+    left: -330px;
   }
   .nav-3-right-hidden3 {
     left: -550px;
@@ -958,15 +1037,35 @@ body {
   .nav-3 {
     padding-left: 20px;
   }
+  .nav-3-boxes1 {
+    width: 100%;
+    padding: 10px;
+  }
+  .nav-3-boxes1 .nav-3-box1 {
+    width: 20%;
+    padding-bottom: 10px;
+  }
+  .nav-3-boxes1 .nav-3-box1 ul {
+    padding: 0px;
+  }
+  .nav-3-boxes1 .nav-3-box1 ul li a {
+    font-size: 9px;
+    color: black;
+  }
+  .nav-3-boxes1 .nav-3-box1 ul li i {
+    display: none;
+    color: var(--primary-color);
+    font-size: 10px;
+    margin-right: 3px;
+  }
 }
-@media (width<900px) {
+@media (width<970px) {
   .nav-3-category {
     display: none;
   }
   .nav-3-right {
     display: none;
   }
-
 }
 /* ------------------------------ slider arrow ------------------------------------*/
 .arrow-slider {
@@ -1558,12 +1657,12 @@ body {
   z-index: 100;
 }
 /*----------------------------------------------swiper ---------------------------------------------------------*/
-.swiper-section{
+.swiper-section {
   width: 100%;
   text-align: center;
-  padding: 30px 0px;
+  padding: 30px 10px;
 }
-.swiper-section h1{
+.swiper-section h1 {
   font-weight: 700;
   margin: 8px 0px;
 }
@@ -1593,10 +1692,19 @@ body {
   width: 100%;
   height: 100%;
 }
-@media(width<450px){
-  .swiper-slide{
-    width: 250px;
-    height: 250px;
+@media (width<600px) {
+  .swiper-slide {
+    width: 300px;
+    height: 300px;
+  }
+  .swiper-container {
+    height: 400px;
+  }
+}
+@media (width<450px) {
+  .swiper-slide {
+    width: 230px;
+    height: 230px;
   }
   .swiper-container {
     height: 400px;
