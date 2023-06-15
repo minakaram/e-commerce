@@ -44,21 +44,31 @@ var nav_left_id = document.getElementById("left-side-navbar-id");
 var section1 = document.getElementById("section1");
 var overylay = document.getElementById("overlay-id");
 // left nav dropdowns
+const body = document.querySelector("body");
+
+// open navigation
 nav_left_show.addEventListener("click", () => {
-  nav_left_id.style.left === "-260px";
   nav_left_id.style.left = "0px";
   overylay.style.display = "block";
+  body.style.overflow = "hidden";
+});
 
-  // left nav overlay
-  document.addEventListener("click", function (event) {
-    if (
-      !nav_left_id.contains(event.target) &&
-      !nav_left_show.contains(event.target)
-    ) {
-      nav_left_id.style.left = "-260px";
-      overylay.style.display = "none";
-    }
-  });
+// close navigation
+document.addEventListener("click", function (event) {
+  if (
+    !nav_left_id.contains(event.target) &&
+    !nav_left_show.contains(event.target)
+  ) {
+    nav_left_id.style.left = "-260px";
+    overylay.style.display = "none";
+    body.style.overflow = "auto";
+  }
+});
+
+// scroll navigation
+leftNav.addEventListener("wheel", function (e) {
+  e.preventDefault();
+  leftNav.scrollTop += e.deltaY;
 });
 
 // categories dropdowns
