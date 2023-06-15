@@ -155,10 +155,10 @@ body {
 }
 @media (width<450px) {
   .left-side-navbar {
-    width: 200px;
+    width: 250px;
   }
   .left-side-navbar button {
-    width: 200px;
+    width: 250px;
   }
   .left-side-navbar ul li a {
     text-decoration: none;
