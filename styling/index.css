@@ -1326,7 +1326,7 @@ body {
     overflow: hidden;
   }
   .slider .slider-left-items .slider-item-hidden2 {
-    top: -50px;
+    top: -51px;
   }
   .slider .slider-left-items .slider-item-hidden3 {
     top: -102px;
@@ -1341,7 +1341,16 @@ body {
   .slider .slider-left-items .slider-item-hidden4 ul {
     list-style: none;
     padding-left: 0px;
-    padding: 2px;
+    padding: 0px;
+  }
+  .slider .slider-left-items .slider-item-hidden2 ul{
+    padding: 0.8px;
+  }
+  .slider .slider-left-items .slider-item-hidden3 ul{
+    padding: 1px;
+  }
+  .slider .slider-left-items .slider-item-hidden4 ul{
+    padding: 1px;
   }
   .slider .slider-left-items .slider-item-hidden1 ul li,
   .slider .slider-left-items .slider-item-hidden2 ul li,
