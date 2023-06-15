@@ -43,7 +43,25 @@ var nav_left_show = document.getElementById("nav-left-show");
 var nav_left_id = document.getElementById("left-side-navbar-id");
 var section1 = document.getElementById("section1");
 var overylay = document.getElementById("overlay-id");
-const body = document.querySelector("body");  
+const body = document.querySelector("body");
+
+// set viewport meta tag
+function setViewport() {
+  var viewport = document.querySelector('meta[name="viewport"]');
+  if (viewport) {
+    viewport.setAttribute(
+      "content",
+      "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    );
+  }
+}
+
+// call setViewport on page load
+window.addEventListener("load", setViewport);
+
+// call setViewport on window resize
+window.addEventListener("resize", setViewport);
+
 // left nav dropdowns
 nav_left_show.addEventListener("click", () => {
   nav_left_id.style.left === "-260px";
