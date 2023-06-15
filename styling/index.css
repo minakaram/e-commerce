@@ -154,7 +154,7 @@ body {
   background-repeat: no-repeat;
 }
 @media (width<450px) {
-  .left-side-navbar{
+  .left-side-navbar {
     width: 200px;
   }
   .left-side-navbar button {
@@ -1661,6 +1661,7 @@ body {
   width: 100%;
   text-align: center;
   padding: 30px 10px;
+  background-color: #e7e7e9;
 }
 .swiper-section h1 {
   font-weight: 700;
@@ -1708,5 +1709,121 @@ body {
   }
   .swiper-container {
     height: 400px;
+  }
+}
+/*-------------------------------------------------------------- products------------------------------------------ */
+.products {
+  text-align: center;
+  padding: 50px 0px;
+  width: 100%;
+}
+.products .products-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0px auto;
+  padding: 20px 5px;
+}
+.products .product-example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.products .product-example .product-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 290px;
+  border-radius: 20px;
+  position: relative;
+}
+.products .product-example .product-img .product-example-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.products .product-example .product-img button {
+  padding: 7px 20px;
+  border: 1px solid gray;
+}
+.products .product-example .product-img button:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.products .product-example .product-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0px;
+  font-weight: 700;
+  font-size: 20px;
+}
+.products .product-example .product-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.products .product-example .product-action .outer {
+  padding: 12px;
+  border: 1px solid rgb(116, 113, 113);
+  margin-right: 3px;
+}
+.products .product-example .product-action .outer:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.products .product-example .product-action button {
+  padding: 8px 15px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
+}
+.product-example:hover .product-img .product-example-inner {
+  opacity: 1;
+}
+.product-example:hover .product-action {
+  opacity: 1;
+}
+
+.products .product-example .product-action button:hover {
+  background-color: #2e3037;
+}
+
+@media (width<1200px) {
+  .products .product-example .product-details {
+    font-size: 18px;
+    justify-content: space-between;
+  }
+  .products .product-example .product-action button {
+    padding: 11px 8px;
+    font-size: 13px;
+  }
+}
+@media (width<580px) {
+  .products .product-example .product-details {
+    font-size: 18px;
+    justify-content: space-evenly;
+  }
+  .products .product-example .product-action button {
+    padding: 8px 15px;
+    font-size: 15px;
   }
 }
