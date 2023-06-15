@@ -51,7 +51,7 @@ function setViewport() {
   if (viewport) {
     viewport.setAttribute(
       "content",
-      "width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0"
+      "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0"
     );
   }
 }
