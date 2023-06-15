@@ -43,32 +43,23 @@ var nav_left_show = document.getElementById("nav-left-show");
 var nav_left_id = document.getElementById("left-side-navbar-id");
 var section1 = document.getElementById("section1");
 var overylay = document.getElementById("overlay-id");
+const body = document.querySelector("body");  
 // left nav dropdowns
-const body = document.querySelector("body");
-
-// open navigation
 nav_left_show.addEventListener("click", () => {
+  nav_left_id.style.left === "-260px";
   nav_left_id.style.left = "0px";
   overylay.style.display = "block";
-  body.style.overflow = "hidden";
-});
 
-// close navigation
-document.addEventListener("click", function (event) {
-  if (
-    !nav_left_id.contains(event.target) &&
-    !nav_left_show.contains(event.target)
-  ) {
-    nav_left_id.style.left = "-260px";
-    overylay.style.display = "none";
-    body.style.overflow = "auto";
-  }
-});
-
-// scroll navigation
-leftNav.addEventListener("wheel", function (e) {
-  e.preventDefault();
-  leftNav.scrollTop += e.deltaY;
+  // left nav overlay
+  document.addEventListener("click", function (event) {
+    if (
+      !nav_left_id.contains(event.target) &&
+      !nav_left_show.contains(event.target)
+    ) {
+      nav_left_id.style.left = "-260px";
+      overylay.style.display = "none";
+    }
+  });
 });
 
 // categories dropdowns
