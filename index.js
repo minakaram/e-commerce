@@ -51,7 +51,7 @@ function setViewport() {
   if (viewport) {
     viewport.setAttribute(
       "content",
-      "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+      "width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0"
     );
   }
 }
@@ -61,6 +61,8 @@ window.addEventListener("load", setViewport);
 
 // call setViewport on window resize
 window.addEventListener("resize", setViewport);
+
+// -------------------------------------------------------------------------------------------//
 
 // left nav dropdowns
 nav_left_show.addEventListener("click", () => {
