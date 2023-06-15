@@ -58,6 +58,7 @@ body {
 }
 .left-side-navbar ul {
   padding-left: 5px;
+  margin-bottom: 0px;
 }
 .left-side-navbar ul li {
   width: 100%;
