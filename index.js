@@ -84,9 +84,9 @@ let navbar1 = document.getElementById("navbar1");
 let navbar2 = document.getElementById("navbar2");
 let navbar3 = document.getElementById("navbar3");
 let navigation = document.getElementById("navigation-id");
-
+let scroll_button = document.getElementById("scrolling");
 window.addEventListener("scroll", function () {
-  var scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+  var scrollHeight = document.documentElement.scrollTop;
 
   if (scrollHeight > 50) {
     navigation.style.opacity = "0";
@@ -94,8 +94,6 @@ window.addEventListener("scroll", function () {
     navbar1.style.opacity = "0";
     navbar2.style.opacity = "0";
     navbar3.style.position = "fixed";
-    navbar3.style.paddingTop = "10px";
-    navbar3.style.paddingBottom = "10px";
   } else {
     navigation.style.opacity = "1";
     navbar1.style.opacity = "1";
@@ -103,7 +101,20 @@ window.addEventListener("scroll", function () {
     navigation.style.height = "auto";
     navbar3.style.position = "static";
   }
+  if (scrollHeight > 100) {
+    scroll_button.classList.add("scroll-up-show");
+  }
+  else {
+    scroll_button.classList.remove("scroll-up-show");
+  }
 });
+scroll_button.onclick=()=>{
+scroll({
+  left:0,
+  top:0,
+  behavior:"smooth",
+})
+}
 
 // -------------------------------------------------------------------------------------------//
 // left nav dropdowns
