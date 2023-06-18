@@ -94,6 +94,8 @@ window.addEventListener("scroll", function () {
     navbar1.style.opacity = "0";
     navbar2.style.opacity = "0";
     navbar3.style.position = "fixed";
+    navbar3.style.paddingTop = "10px";
+    navbar3.style.paddingBottom = "10px";
   } else {
     navigation.style.opacity = "1";
     navbar1.style.opacity = "1";
