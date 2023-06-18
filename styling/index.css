@@ -40,6 +40,31 @@ body {
   opacity: 1;
   transition-delay: 0s;
 }
+.scroll-anmi {
+  animation-name: translate;
+  animation: translate 2s;
+}
+@keyframes translate {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /*------------------------------------------------------------- left side bar ----------------------------------------*/
 .left-side-navbar {
   width: 260px;

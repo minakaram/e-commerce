@@ -64,22 +64,7 @@ window.addEventListener("resize", setViewport);
 
 // -------------------------------------------------------------------------------------------//
 // fixed navbar
-// let navbar3 = document.getElementById("navbar3");
-// let navigation = document.getElementById("navigation-id");
-// window.addEventListener("scroll", function () {
-//   var scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
 
-//   if (scrollHeight > 0) {
-//     navigation.style.opacity = "0";
-//     // navbar2.style.opacity = "0";
-//     // navbar3.classList.add("fixed");
-//     navigation.style.height = 0;
-//     navbar3.style.position = "fixed";
-//   } else {
-//     navigation.style.opacity = "1";
-//     navbar3.style.position = "static";
-//   }
-// });
 let navbar1 = document.getElementById("navbar1");
 let navbar2 = document.getElementById("navbar2");
 let navbar3 = document.getElementById("navbar3");
@@ -115,6 +100,11 @@ scroll({
   behavior:"smooth",
 })
 }
+setInterval(function () {
+  scroll_button.classList.remove("scroll-anmi");
+  void scroll_button.offsetWidth;
+  scroll_button.classList.add("scroll-anmi");
+}, 5000);
 
 // -------------------------------------------------------------------------------------------//
 // left nav dropdowns
@@ -638,7 +628,7 @@ function countdown(endDate) {
     document.getElementById("timer-seconds").innerHTML = seconds;
   }, 1000);
 }
-
-// Example usage:
-// 7 days from now
 countdown(endDate);
+
+
+
