@@ -88,7 +88,7 @@ let navigation = document.getElementById("navigation-id");
 window.addEventListener("scroll", function () {
   var scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollHeight > 10) {
+  if (scrollHeight > 50) {
     navigation.style.opacity = "0";
     navigation.style.height = "0";
     navbar1.style.opacity = "0";
