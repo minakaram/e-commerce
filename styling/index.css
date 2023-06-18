@@ -209,7 +209,18 @@ body {
 .navigation-container {
   width: 100%;
   background-color: transparent;
-  z-index: 100;
+  /* z-index: 1000; */
+  /* position: fixed; */
+}
+.hidden{
+  opacity: 0;
+  pointer-events: none;
+  height: 0px;
+}
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
 }
 /*--------------------------- nav 1 --------------------------*/
 .navigation-container .nav-1 {
@@ -217,6 +228,8 @@ body {
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: var(--primary-color);
+  transition: opacity 0.3s ease-out, height 0.3s ease-out;
+  position: relative;
 }
 .navigation-container .nav-1 .nav-1-inner-left {
   width: 50%;
@@ -316,6 +329,10 @@ body {
   flex-wrap: wrap;
   padding: 5px 0px;
   background-color: transparent;
+  transition: opacity 0.3s ease-out, height 0.3s ease-out;
+  background-color: white;
+  position: relative;
+  width: 100%;
 }
 .navigation-container .nav-2 .nav-2-inner-left {
   width: 50%;
@@ -458,7 +475,7 @@ body {
 }
 @media (width<1200px) {
   .navigation-container .nav-2 {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
   .navigation-container .nav-2 .nav-2-inner-left {
@@ -543,11 +560,13 @@ body {
   width: 100%;
   background-color: #2e3037;
   padding-left: 156px;
-  z-index: 100;
+  z-index: 200;
   display: flex;
   align-items: center;
   height: 45px;
   border: 1px solid white;
+  position: static;
+  top: 0;
 }
 .nav-3-category {
   position: relative;
@@ -1841,7 +1860,7 @@ body {
   width: 100%;
   text-align: center;
   color: #fff;
-  padding: 0px 15px;
+  padding: 0px 30px;
 }
 .countdown-container .countdown-inner .countdown-details p:first-of-type{
 font-weight: 800;
@@ -1921,14 +1940,16 @@ margin:0px 15px;
   }
 }
 @media(width<550px){
-  .countdown-container .countdown-inner .countdown-timer{
-  }
   .countdown-container .countdown-inner .countdown-timer .timer-box{
     font-size: 8px;
     width: 80px;
-    height: 80px;
+    height: 70px;
   }
   .countdown-container .countdown-inner .countdown-timer .timer-box .number{
-    font-size: 20px;
+    font-size: 25px;
   }
+  .countdown-container .countdown-inner .countdown-details p:first-of-type{
+    font-weight: 800;
+    font-size: 30px;
+    }
 }

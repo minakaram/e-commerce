@@ -63,7 +63,47 @@ window.addEventListener("load", setViewport);
 window.addEventListener("resize", setViewport);
 
 // -------------------------------------------------------------------------------------------//
+// fixed navbar
+// let navbar3 = document.getElementById("navbar3");
+// let navigation = document.getElementById("navigation-id");
+// window.addEventListener("scroll", function () {
+//   var scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
 
+//   if (scrollHeight > 0) {
+//     navigation.style.opacity = "0";
+//     // navbar2.style.opacity = "0";
+//     // navbar3.classList.add("fixed");
+//     navigation.style.height = 0;
+//     navbar3.style.position = "fixed";
+//   } else {
+//     navigation.style.opacity = "1";
+//     navbar3.style.position = "static";
+//   }
+// });
+let navbar1 = document.getElementById("navbar1");
+let navbar2 = document.getElementById("navbar2");
+let navbar3 = document.getElementById("navbar3");
+let navigation = document.getElementById("navigation-id");
+
+window.addEventListener("scroll", function () {
+  var scrollHeight = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollHeight > 10) {
+    navigation.style.opacity = "0";
+    navigation.style.height = "0";
+    navbar1.style.opacity = "0";
+    navbar2.style.opacity = "0";
+    navbar3.style.position = "fixed";
+  } else {
+    navigation.style.opacity = "1";
+    navbar1.style.opacity = "1";
+    navbar2.style.opacity = "1";
+    navigation.style.height = "auto";
+    navbar3.style.position = "static";
+  }
+});
+
+// -------------------------------------------------------------------------------------------//
 // left nav dropdowns
 nav_left_show.addEventListener("click", () => {
   nav_left_id.style.left === "-260px";
