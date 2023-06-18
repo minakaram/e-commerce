@@ -558,3 +558,34 @@ for (let i = 0; i < slides.length; i++) {
     sliderImage.style.transition = " 4s ease-in-out";
   });
 }
+//--------------------------------- count down ---------------------------------------------//
+
+var displayElement = document.getElementById("countdown-hide");
+var endDate = new Date().getTime() + 14 * 24 * 60 * 60 * 1000;
+function countdown(endDate) {
+  var countdownInterval = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = endDate - now;
+
+    if (distance < 0) {
+      clearInterval(countdownInterval);
+      displayElement.style.display = "none";
+    }
+
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("timer-day").innerHTML = days;
+    document.getElementById("timer-hours").innerHTML = hours;
+    document.getElementById("timer-minutes").innerHTML = minutes;
+    document.getElementById("timer-seconds").innerHTML = seconds;
+  }, 1000);
+}
+
+// Example usage:
+// 7 days from now
+countdown(endDate);
