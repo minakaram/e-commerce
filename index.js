@@ -73,7 +73,7 @@ let scroll_button = document.getElementById("scrolling");
 window.addEventListener("scroll", function () {
   var scrollHeight = document.documentElement.scrollTop;
 
-  if (scrollHeight > 50) {
+  if (scrollHeight > 100) {
     navigation.style.opacity = "0";
     navigation.style.height = "0";
     navbar1.style.opacity = "0";
