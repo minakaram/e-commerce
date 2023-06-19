@@ -2221,6 +2221,9 @@ background: var(--primary-color) !important;
     padding: 7px 5px;
     display: block;
   }
+  .products-owl .product-example .product-action{
+    opacity: 1;
+  }
 }
 @media (width<400px) {
   .products-owl .product-example .product-img {
@@ -2253,7 +2256,5 @@ background: var(--primary-color) !important;
   .owl-next {
     top: 35%;
   }
-  .products-owl .product-example .product-action{
-    opacity: 1;
-  }
+
 }
