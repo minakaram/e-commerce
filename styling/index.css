@@ -2253,4 +2253,7 @@ background: var(--primary-color) !important;
   .owl-next {
     top: 35%;
   }
+  .products-owl .product-example .product-action{
+    opacity: 1;
+  }
 }
