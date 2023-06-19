@@ -2225,9 +2225,9 @@ body {
     opacity: 1;
   }
   .products-owl .product-example .product-img button {
-    padding: 6px 7px;
+    padding: 6px 9px;
     border: 1px solid gray;
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 @media (width<400px) {
