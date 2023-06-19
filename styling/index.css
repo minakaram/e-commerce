@@ -2159,6 +2159,9 @@ body {
 .owl-next {
   right: -40px;
 }
+.owl-dot.active span{
+background: var(--primary-color) !important;
+}
 @media (min-width: 1000px) and (max-width: 1200px) {
   .products-owl .product-example .product-details {
     font-size: 12px;
