@@ -35,7 +35,7 @@ body {
   opacity: 0;
   transition: visibility 0s linear 0.3s, opacity 0.3s linear;
 }
-.scroll-up-show{
+.scroll-up-show {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
@@ -1105,7 +1105,6 @@ body {
   }
   .nav-3 {
     padding-left: 20px;
-
   }
   .nav-3-boxes1 {
     width: 100%;
@@ -1136,7 +1135,7 @@ body {
   .nav-3-right {
     display: none;
   }
-  .nav-3{
+  .nav-3 {
     padding-top: 10px;
     padding-bottom: 10px;
     height: 55px;
@@ -2005,5 +2004,247 @@ body {
   .countdown-container .countdown-inner .countdown-details p:first-of-type {
     font-weight: 800;
     font-size: 30px;
+  }
+}
+/*------------------------------------------------------- owl carusel ------------------------------------------------*/
+.products-owl {
+  width: 100%;
+  padding: 20px 20px;
+  text-align: center;
+}
+.owl-carousel {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+}
+.products-owl .products-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0px auto;
+  padding: 20px 5px;
+}
+.products-owl .product-example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.products-owl .product-example::before{
+  content: "new";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 50px;
+  background-color: #2e3037;
+  color: white;
+  text-align: center;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.products-owl .product-example::after{
+  content: "-20%";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  height: 30px;
+  width: 50px;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-owl .product-example .product-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 290px;
+  position: relative;
+}
+.products-owl .product-example .product-img .product-example-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.products-owl .product-example .product-img button {
+  padding: 7px 20px;
+  border: 1px solid gray;
+}
+.products-owl .product-example .product-img button:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.products-owl .product-example .product-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.products-owl .product-example .product-action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.products-owl .product-example .product-action .outer {
+  padding: 11.5px;
+  border: 1px solid rgb(116, 113, 113);
+  margin-right: 3px;
+}
+.products-owl .product-example .product-action .outer:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.products-owl .product-example .product-action button {
+  padding: 9px 8px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+}
+.product-example:hover .product-img .product-example-inner {
+  opacity: 1;
+}
+.product-example:hover .product-action {
+  opacity: 1;
+}
+
+.products-owl .product-example .product-action button:hover {
+  background-color: #2e3037;
+}
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  color: #80a241 !important ;
+  font-size: 50px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0xp;
+  background-color: white !important;
+}
+
+.owl-prev {
+  left: -40px;
+}
+
+.owl-next {
+  right: -40px;
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .products-owl .product-example .product-details {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1330px) {
+  .products-owl .product-example .product-action button {
+    font-size: 10px;
+    padding: 8px 2px;
+  }
+  .products-owl .product-example .product-action .outer {
+    padding: 8px 7px;
+  }
+}
+@media (width<805px) {
+  .products-owl .product-example .product-action button {
+    font-size: 10px;
+  }
+  .products-owl .product-example .product-action .outer {
+    padding: 8px;
+  }
+  .products-owl .product-example .product-details {
+    font-size: 14px;
+  }
+}
+@media (width<610px) {
+  .products-owl .product-example .product-img {
+    width: 200px;
+    height: 250px;
+  }
+  .products-owl .product-example .product-details {
+    font-size: 10px;
+    justify-content: space-evenly;
+  }
+  .products-owl .product-example .product-action button {
+    padding: 7px 5px;
+  }
+  .products-owl .product-example .product-action .outer {
+    padding: 6.5px;
+  }
+}
+@media (width<550px) {
+  .products-owl .product-example .product-img {
+    width: 160px;
+    height: 190px;
+  }
+  .owl-prev {
+    left: -30px;
+  }
+
+  .owl-next {
+    right: -30px;
+  }
+  .products-owl .product-example .product-action button {
+    padding: 7px 5px;
+    display: block;
+  }
+}
+@media (width<400px) {
+  .products-owl .product-example .product-img {
+    width: 120px;
+    height: 190px;
+  }
+  .products-owl .product-example .product-action button {
+    padding: 5px 2px;
+    font-size: 7px;
+  }
+  .products-owl .product-example .product-action button i {
+    margin-right: 3px;
+  }
+  .products-owl .product-example .product-action .outer {
+    padding: 4px 4px;
+    font-size: 12px;
+  }
+  .products-owl .product-example .product-img button {
+    padding: 6px 7px;
+    border: 1px solid gray;
+    font-size: 11px;
+  }
+  .products-owl .product-example .product-details {
+    font-size: 8.5px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 0px;
+  }
+  .owl-prev,
+  .owl-next {
+    top: 35%;
   }
 }

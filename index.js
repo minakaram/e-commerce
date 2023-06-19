@@ -55,6 +55,42 @@ function setViewport() {
     );
   }
 }
+// ----------------------------- owl caresul jquery -------------------------//
+
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 15,
+  nav: true,
+  dots: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    610: {
+      items: 3,
+    },
+    1000: {
+      items: 5,
+    },
+  },
+});
+//----------------------------- swiper --------------------------------------//
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 200,
+    modifier: 1,
+    slideShadows: true,
+  },
+  pagination: { el: ".swiper-pagination" },
+  initialSlide: 4,
+});
+//----------------------------------------------------------------------------//
 
 // call setViewport on page load
 window.addEventListener("load", setViewport);
@@ -88,21 +124,20 @@ window.addEventListener("scroll", function () {
   }
   if (scrollHeight > 100) {
     scroll_button.classList.add("scroll-up-show");
-  }
-  else {
+  } else {
     scroll_button.classList.remove("scroll-up-show");
   }
 });
-scroll_button.onclick=()=>{
-scroll({
-  left:0,
-  top:0,
-  behavior:"smooth",
-})
-}
+scroll_button.onclick = () => {
+  scroll({
+    left: 0,
+    top: 0,
+    behavior: "smooth",
+  });
+};
 setInterval(function () {
   scroll_button.classList.remove("scroll-anmi");
-  void scroll_button.offsetWidth;
+  scroll_button.offsetWidth;
   scroll_button.classList.add("scroll-anmi");
 }, 5000);
 
@@ -629,6 +664,3 @@ function countdown(endDate) {
   }, 1000);
 }
 countdown(endDate);
-
-
-
