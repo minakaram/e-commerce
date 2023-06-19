@@ -2233,7 +2233,7 @@ body {
 @media (width<400px) {
   .products-owl .product-example .product-img {
     width: 120px;
-    height: 190px;
+    height: 210px;
   }
   .products-owl .product-example .product-action button {
     padding: 5px 2px;
