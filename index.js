@@ -55,6 +55,11 @@ function setViewport() {
     );
   }
 }
+// call setViewport on page load
+window.addEventListener("load", setViewport);
+
+// call setViewport on window resize
+window.addEventListener("resize", setViewport);
 // ----------------------------- owl caresul jquery -------------------------//
 
 $(".owl-carousel").owlCarousel({
@@ -62,7 +67,7 @@ $(".owl-carousel").owlCarousel({
   margin: 15,
   nav: true,
   dots: true,
-  autoplay:true,
+  autoplay: true,
   responsive: {
     0: {
       items: 2,
@@ -93,12 +98,6 @@ var swiper = new Swiper(".mySwiper", {
 });
 //----------------------------------------------------------------------------//
 
-// call setViewport on page load
-window.addEventListener("load", setViewport);
-
-// call setViewport on window resize
-window.addEventListener("resize", setViewport);
-
 // -------------------------------------------------------------------------------------------//
 // fixed navbar
 
@@ -110,13 +109,13 @@ let scroll_button = document.getElementById("scrolling");
 window.addEventListener("scroll", function () {
   var scrollHeight = document.documentElement.scrollTop;
 
-  if (scrollHeight > 50) {
+  if (scrollHeight > 100) {
     navigation.style.opacity = "0";
     navigation.style.height = "0";
     navbar1.style.opacity = "0";
     navbar2.style.opacity = "0";
     navbar3.style.position = "fixed";
-  } else {
+  } else if (scrollHeight < 50) {
     navigation.style.opacity = "1";
     navbar1.style.opacity = "1";
     navbar2.style.opacity = "1";
