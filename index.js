@@ -109,19 +109,19 @@ let scroll_button = document.getElementById("scrolling");
 window.addEventListener("scroll", function () {
   var scrollHeight = document.documentElement.scrollTop;
 
-  if (scrollHeight > 100) {
-    navigation.style.opacity = "0";
-    navigation.style.height = "0";
-    navbar1.style.opacity = "0";
-    navbar2.style.opacity = "0";
-    navbar3.style.position = "fixed";
-  } else if (scrollHeight < 50) {
-    navigation.style.opacity = "1";
-    navbar1.style.opacity = "1";
-    navbar2.style.opacity = "1";
-    navigation.style.height = "auto";
-    navbar3.style.position = "static";
-  }
+  // if (scrollHeight > 100) {
+  //   navigation.style.opacity = "0";
+  //   navigation.style.height = "0";
+  //   navbar1.style.opacity = "0";
+  //   navbar2.style.opacity = "0";
+  //   navbar3.style.position = "fixed";
+  // } else if (scrollHeight < 50) {
+  //   navigation.style.opacity = "1";
+  //   navbar1.style.opacity = "1";
+  //   navbar2.style.opacity = "1";
+  //   navigation.style.height = "auto";
+  //   navbar3.style.position = "static";
+  // }
   if (scrollHeight > 100) {
     scroll_button.classList.add("scroll-up-show");
   } else {
