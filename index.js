@@ -46,20 +46,20 @@ var overylay = document.getElementById("overlay-id");
 const body = document.querySelector("body");
 
 // set viewport meta tag
-function setViewport() {
-  var viewport = document.querySelector('meta[name="viewport"]');
-  if (viewport) {
-    viewport.setAttribute(
-      "content",
-      "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0"
-    );
-  }
-}
-// call setViewport on page load
-window.addEventListener("load", setViewport);
+// function setViewport() {
+//   var viewport = document.querySelector('meta[name="viewport"]');
+//   if (viewport) {
+//     viewport.setAttribute(
+//       "content",
+//       "width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0"
+//     );
+//   }
+// }
+// // call setViewport on page load
+// window.addEventListener("load", setViewport);
 
-// call setViewport on window resize
-window.addEventListener("resize", setViewport);
+// // call setViewport on window resize
+// window.addEventListener("resize", setViewport);
 // ----------------------------- owl caresul jquery -------------------------//
 
 $(".owl-carousel").owlCarousel({
