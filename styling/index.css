@@ -1916,7 +1916,6 @@ max-width: 85%;
 /*------------------------------ countdown --------------------------------*/
 .countdown-container {
   width: 100%;
-  /* height: 600px; */
   background-image: url(../icons/WS-Task2/images/10.jpg);
   background-size: cover;
   background-repeat: no-repeat;
