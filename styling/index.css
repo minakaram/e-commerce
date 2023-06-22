@@ -369,16 +369,16 @@ body {
     width: 100%;
   }
 }
-@media (width<320px){
-  .navigation-container .nav-1 .nav-1-inner-left{
+@media (width<320px) {
+  .navigation-container .nav-1 .nav-1-inner-left {
     font-size: 9px;
   }
-  .navigation-container .nav-1 .nav-1-inner-right{
+  .navigation-container .nav-1 .nav-1-inner-right {
     font-size: 9px;
     justify-content: center;
     padding-left: 8px;
   }
-  .navigation-container .nav-1 .nav-1-inner-right .nav-1-inner-right-div{
+  .navigation-container .nav-1 .nav-1-inner-right .nav-1-inner-right-div {
     margin-right: 5px;
   }
 }
@@ -613,6 +613,30 @@ body {
   .navigation-container .nav-2 .nav-2-inner-right ul {
     margin-left: -40px !important;
     margin-top: 17px !important;
+  }
+}
+@media (width<320px) {
+  .navigation-container .nav-2 .nav-2-inner-left select {
+    width: 70px;
+    height: 41px;
+  }
+  .navigation-container .nav-2 .nav-2-inner-left input {
+    width: 180px;
+    height: 41px;
+  }
+  .navigation-container .nav-2 .nav-2-inner-left button {
+    height: 41px;
+    position: absolute;
+  }
+  .navigation-container .nav-2 .nav-2-inner-right {
+    width: 97%;
+  }
+  .img-logo img {
+    width: 75px !important;
+  }
+  .nav-2-inner-right-div {
+    font-size: 7px;
+    margin-left: 0px !important;
   }
 }
 /*--------------------------- nav 3 --------------------------*/
@@ -1589,6 +1613,17 @@ body {
     margin-right: 5px;
   }
 }
+@media (width<320px){
+  .radios{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .radios label {
+    margin-right: 2px;
+    padding: 4px;
+  }
+}
 /*------------------------ cards-sections ---------------------------*/
 .cards-examples {
   width: 100%;
@@ -1801,7 +1836,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-max-width: 85%;
+  max-width: 85%;
   margin: 0px auto;
   padding: 20px 5px;
 }
@@ -1897,7 +1932,7 @@ max-width: 85%;
   }
 }
 @media screen and (min-width: 990px) and (max-width: 1260px) {
-  .products .product-example .product-action button{
+  .products .product-example .product-action button {
     padding: 12px 4px;
     font-size: 11px;
   }
@@ -1905,7 +1940,7 @@ max-width: 85%;
     font-size: 14px;
   }
 }
-@media screen and (min-width: 760px) and (max-width: 860px){
+@media screen and (min-width: 760px) and (max-width: 860px) {
   .products .product-example .product-details {
     font-size: 12px;
     justify-content: space-around;
@@ -2384,38 +2419,37 @@ max-width: 85%;
   }
 }
 /*------------------------------------------------------- coming soon -------------------------------------------*/
-.main-soon{
+.main-soon {
   width: 100%;
   text-align: center;
   padding: 30px 0px;
 }
 .main-soon .soon-container {
-max-width: 85%;
+  max-width: 85%;
   margin-top: 40px;
 }
-.main-soon .soon-container .soon-inner{
+.main-soon .soon-container .soon-inner {
   border-radius: 5px !important;
   margin-bottom: 10px;
-
 }
-.main-soon .soon-container .soon-inner .card-body{
-text-align: left;
+.main-soon .soon-container .soon-inner .card-body {
+  text-align: left;
 }
-.main-soon .soon-container .soon-inner .card-body p:first-of-type{
+.main-soon .soon-container .soon-inner .card-body p:first-of-type {
   font-size: 25px;
   font-weight: 700;
   margin: 0;
 }
-.main-soon .soon-container .soon-inner .card-body p:nth-of-type(2){
+.main-soon .soon-container .soon-inner .card-body p:nth-of-type(2) {
   font-size: 20px;
   font-weight: 700;
 }
-.main-soon .soon-container .soon-inner .card-body small span i{
+.main-soon .soon-container .soon-inner .card-body small span i {
   font-size: 12px;
   color: var(--primary-color);
   margin-left: 5px;
 }
- .main-soon .soon-container .soon-inner .card-body .product-action {
+.main-soon .soon-container .soon-inner .card-body .product-action {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -2443,23 +2477,22 @@ text-align: left;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
-.main-soon .soon-container .soon-inner .card{
+.main-soon .soon-container .soon-inner .card {
   border: none;
   border-radius: 10px !important;
 }
-.main-soon .soon-container .soon-inner .card img{
+.main-soon .soon-container .soon-inner .card img {
   border-radius: 5px;
 }
 
-.main-soon p:first-of-type{
+.main-soon p:first-of-type {
   font-size: 35px;
   font-weight: 700;
 }
 
-@media(width>700px){
-  .main-soon .soon-container .soon-inner .card:hover .img-fluid{
+@media (width>700px) {
+  .main-soon .soon-container .soon-inner .card:hover .img-fluid {
     opacity: 0.4;
     transition: 0.4s;
   }
-  
 }
