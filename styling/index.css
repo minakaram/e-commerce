@@ -2353,3 +2353,79 @@ body {
     margin-left: 10px;
   }
 }
+/*------------------------------------------------------- coming soon -------------------------------------------*/
+.main-soon{
+  width: 100%;
+  text-align: center;
+  padding: 30px 10px;
+}
+.main-soon .soon-container {
+  width: 100%;
+  margin-top: 40px;
+}
+.main-soon .soon-container .soon-inner{
+  border-radius: 5px !important;
+  margin-bottom: 10px;
+
+}
+.main-soon .soon-container .soon-inner .card-body{
+text-align: left;
+}
+.main-soon .soon-container .soon-inner .card-body p:first-of-type{
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+}
+.main-soon .soon-container .soon-inner .card-body p:nth-of-type(2){
+  font-size: 20px;
+  font-weight: 700;
+}
+.main-soon .soon-container .soon-inner .card-body small span i{
+  font-size: 12px;
+  color: var(--primary-color);
+  margin-left: 5px;
+}
+ .main-soon .soon-container .soon-inner .card-body .product-action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.main-soon .soon-container .soon-inner .card-body .product-action button {
+  padding: 9px 8px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+}
+
+.main-soon .soon-container .soon-inner .card-body .product-action .outer {
+  padding: 11.5px;
+  border: 1px solid rgb(116, 113, 113);
+  margin-right: 3px;
+}
+.main-soon .soon-container .soon-inner .card-body .product-action button:hover {
+  background-color: #2e3037;
+}
+.main-soon .soon-container .soon-inner .card-body .product-action .outer:hover {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+.main-soon .soon-container .soon-inner .card{
+  border: none;
+  border-radius: 10px !important;
+}
+.main-soon .soon-container .soon-inner .card img{
+  border-radius: 5px;
+}
+.main-soon .soon-container .soon-inner .card:hover .img-fluid{
+  opacity: 0.4;
+  transition: 0.4s;
+}
+
+.main-soon p:first-of-type{
+  font-size: 35px;
+  font-weight: 700;
+}
