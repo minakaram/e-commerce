@@ -2207,8 +2207,8 @@ body {
 }
 @media (width<550px) {
   .products-owl .product-example .product-img {
-    width: 160px;
-    height: 190px;
+    width: 120px;
+    height: 210px;
   }
   .owl-prev {
     left: -30px;
