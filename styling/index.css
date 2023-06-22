@@ -2357,10 +2357,10 @@ body {
 .main-soon{
   width: 100%;
   text-align: center;
-  padding: 30px 10px;
+  padding: 30px 0px;
 }
 .main-soon .soon-container {
-  width: 100%;
+max-width: 85%;
   margin-top: 40px;
 }
 .main-soon .soon-container .soon-inner{
