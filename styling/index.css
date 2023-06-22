@@ -1789,7 +1789,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
+max-width: 85%;
   margin: 0px auto;
   padding: 20px 5px;
 }
@@ -1882,6 +1882,25 @@ body {
   .products .product-example .product-action button {
     padding: 11px 8px;
     font-size: 13px;
+  }
+}
+@media screen and (min-width: 990px) and (max-width: 1260px) {
+  .products .product-example .product-action button{
+    padding: 12px 4px;
+    font-size: 11px;
+  }
+  .products .product-example .product-details {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 760px) and (max-width: 860px){
+  .products .product-example .product-details {
+    font-size: 12px;
+    justify-content: space-around;
+  }
+  .products .product-example .product-action button {
+    padding: 10px 5px;
+    font-size: 12px;
   }
 }
 @media (width<580px) {
