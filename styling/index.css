@@ -2269,12 +2269,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #e7e7e9;
 }
 .advertisement .addvertisement-row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
+  width: 90%;
 }
 .advertisement .addvertisement-row .addvertisement-inner1 {
   position: relative;
@@ -2313,7 +2314,7 @@ body {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  /* z-index: -1; */
 }
 .advertisement .addvertisement-row .addvertisement-inner2 {
   display: flex;
