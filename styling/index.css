@@ -369,7 +369,19 @@ body {
     width: 100%;
   }
 }
-
+@media (width<320px){
+  .navigation-container .nav-1 .nav-1-inner-left{
+    font-size: 9px;
+  }
+  .navigation-container .nav-1 .nav-1-inner-right{
+    font-size: 9px;
+    justify-content: center;
+    padding-left: 8px;
+  }
+  .navigation-container .nav-1 .nav-1-inner-right .nav-1-inner-right-div{
+    margin-right: 5px;
+  }
+}
 /*--------------------------- nav 2 --------------------------*/
 .navigation-container .nav-2 {
   display: flex;
@@ -2412,11 +2424,11 @@ text-align: left;
 }
 
 .main-soon .soon-container .soon-inner .card-body .product-action button {
-  padding: 9px 8px;
+  padding: 10px 9px;
   border: 1px solid var(--primary-color);
   background-color: var(--primary-color);
   color: white;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .main-soon .soon-container .soon-inner .card-body .product-action .outer {
