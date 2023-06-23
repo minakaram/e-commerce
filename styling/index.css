@@ -2431,6 +2431,7 @@ body {
 .main-soon .soon-container .soon-inner {
   border-radius: 5px !important;
   margin-bottom: 10px;
+  /* max-height: 300px; */
 }
 .main-soon .soon-container .soon-inner .card-body {
   text-align: left;
@@ -2457,21 +2458,11 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-.main-soon .soon-container .soon-inner .card-body .product-action button {
-  padding: 10px 9px;
-  border: 1px solid var(--primary-color);
-  background-color: var(--primary-color);
-  color: white;
-  font-size: 13px;
-}
 
 .main-soon .soon-container .soon-inner .card-body .product-action .outer {
   padding: 11.5px;
   border: 1px solid rgb(116, 113, 113);
   margin-right: 3px;
-}
-.main-soon .soon-container .soon-inner .card-body .product-action button:hover {
-  background-color: #2e3037;
 }
 .main-soon .soon-container .soon-inner .card-body .product-action .outer:hover {
   color: var(--primary-color);
@@ -2481,8 +2472,11 @@ body {
   border: none;
   border-radius: 10px !important;
 }
-.main-soon .soon-container .soon-inner .card img {
+.main-soon .soon-container .soon-inner .card .back-img {
   border-radius: 5px;
+  background-size: cover;
+  min-height: 330px;
+  background-position: center;
 }
 
 .main-soon p:first-of-type {
@@ -2490,9 +2484,18 @@ body {
   font-weight: 700;
 }
 
+
 @media (width>700px) {
   .main-soon .soon-container .soon-inner .card:hover .img-fluid {
     opacity: 0.4;
     transition: 0.4s;
+  }
+}
+@media (width<700px){
+  .main-soon .soon-container .soon-inner .card .back-img {
+    border-radius: 5px;
+    background-size: cover;
+    max-height: 100px !important;
+    background-position: center;
   }
 }
