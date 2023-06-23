@@ -2430,8 +2430,8 @@ body {
 }
 .main-soon .soon-container .soon-inner {
   border-radius: 5px !important;
-  margin-bottom: 10px;
-  /* max-height: 300px; */
+  margin-bottom: 15px;
+
 }
 .main-soon .soon-container .soon-inner .card-body {
   text-align: left;
@@ -2471,6 +2471,11 @@ body {
 .main-soon .soon-container .soon-inner .card {
   border: none;
   border-radius: 10px !important;
+  box-shadow: 0 0 15px 0px rgba(205, 203, 203, 0.5);
+}
+.main-soon .soon-container .soon-inner .card:hover{
+  transform: translateY(-5px);
+  transition: 0.3s;
 }
 .main-soon .soon-container .soon-inner .card .back-img {
   border-radius: 5px;
@@ -2478,7 +2483,10 @@ body {
   min-height: 330px;
   background-position: center;
 }
-
+.main-soon .soon-container .soon-inner .card:hover .back-img{
+  opacity: 0.6;
+  transition: 0.3s;
+}
 .main-soon p:first-of-type {
   font-size: 35px;
   font-weight: 700;
