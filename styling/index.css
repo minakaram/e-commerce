@@ -1959,6 +1959,9 @@ body {
     padding: 8px 15px;
     font-size: 15px;
   }
+  .products .product-example .product-action{
+    opacity: 1;
+  }
 }
 /*------------------------------ countdown --------------------------------*/
 .countdown-container {
