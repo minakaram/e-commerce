@@ -60,9 +60,9 @@ const body = document.querySelector("body");
 
 // // call setViewport on window resize
 // window.addEventListener("resize", setViewport);
-// ----------------------------- owl caresul jquery -------------------------//
+// ----------------------------- owl caresul jquery 1-------------------------//
 
-$(".owl-carousel").owlCarousel({
+$(".carousel1").owlCarousel({
   loop: true,
   margin: 15,
   nav: true,
@@ -77,6 +77,25 @@ $(".owl-carousel").owlCarousel({
     },
     1000: {
       items: 5,
+    },
+  },
+});
+
+$(".carousel2").owlCarousel({
+  loop: true,
+  margin: 15,
+  nav: true,
+  dots: true,
+  autoplay: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    610: {
+      items: 3,
+    },
+    1000: {
+      items: 3,
     },
   },
 });
