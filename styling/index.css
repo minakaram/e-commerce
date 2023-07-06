@@ -16,6 +16,7 @@
 }
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 .scroll-up {
   position: fixed;
@@ -2616,6 +2617,7 @@ body {
   width: 100%;
   padding: 30px 0px;
   background-color: #e7e5e5;
+  border-bottom: 1px solid gray;
 }
 .contact-us .contact-header {
   width: 100%;
@@ -2659,6 +2661,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   font-size: 13px;
+  margin-top: 10px;
 }
 .contact-us .soon-button button:hover {
   background-color: #2e3037;
